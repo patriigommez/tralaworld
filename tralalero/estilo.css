@@ -1,0 +1,291 @@
+/* ===== ESTILOS BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  background-color: hsl(218, 81%, 81%) !important;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #3609fa !important;
+}
+
+#modoBtn {
+  background-color: #ae5bb9;
+  color: #fff;
+}
+
+#modoBtn:hover {
+  background-color: hwb(294 3% 43%);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+#titulo {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#subtit {
+  text-align: center;
+  font-size: 1.2rem;
+  color: hsl(247, 45%, 51%);
+}
+
+/* ===== FILTROS Y CONTROLES ===== */
+.mb-3 {
+  text-align: center;
+  color: #7b97aa;
+}
+
+#filtro {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(184, 206, 232, 0.1);
+  transition: all 0.3s ease;
+}
+
+#filtro:focus {
+  border-color: #eeece7;
+  box-shadow: 0 0 8px #b0c6f280;
+}
+
+/* ===== BOTÓN DE VISTA ===== */
+#vistaBtn {
+  font-size: 0.90rem;
+  background-color: #b8d0e0;
+  border: none;
+  border-radius: 5px;
+  color: #1d0c5e;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#vistaBtn:hover {
+  background-color: hwb(238 29% 28%);
+  color: hsl(204, 34%, 89%);
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(42, 96, 177, 0.171);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+/* ===== DETALLES ===== */
+#detalle {
+  display: none;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  background-color: rgba(184, 206, 232, 0.116);
+}
+
+/* ===== VISTA LISTA ===== */
+.vista-lista {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Modo claro */
+.titulo-item {
+  color: #333 !important;
+}
+
+.descripcion-item {
+  color: #333 !important; 
+}
+
+/* ===== MODO OSCURO ===== */
+body.modo-oscuro {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+/* Asegurar texto visible en títulos y navbar */
+body.modo-oscuro h1, 
+body.modo-oscuro h2, 
+body.modo-oscuro h5, 
+body.modo-oscuro .navbar-brand, 
+body.modo-oscuro .nav-link {
+  color: white !important;
+}
+
+/* Ajuste del navbar para mejor contraste */
+body.modo-oscuro .navbar {
+  background-color: #222 !important;
+}
+
+/* Botones en modo oscuro */
+body.modo-oscuro .form-control, 
+body.modo-oscuro .btn {
+  background-color: #444 !important;
+  color: white !important;
+  border-color: #555 !important;
+}
+
+.modo-oscuro .form-control::placeholder {
+  color: #bbb;
+}
+
+body.modo-oscuro .card {
+  background-color: #1f1f1f !important;
+  border: 1px solid #444 !important;
+  color: white !important;
+}
+
+body.modo-oscuro .card-text {
+  color: #ddd !important; 
+}
+
+body.modo-oscuro .vista-lista {
+  background-color: #2d2d2d !important;
+  border: 1px solid #444 !important;
+}
+
+body.modo-oscuro .titulo-item {
+  color: white !important;
+}
+
+body.modo-oscuro .descripcion-item {
+  color: #f0f0f0 !important; 
+}
+
+
+/* Notificaciones en modo oscuro */
+body.modo-oscuro .toast {
+  background-color: #2d2d2d !important;
+  color: white !important;
+  border-color: #444;
+}
+
+/* Hover en botones para mayor claridad */
+body.modo-oscuro .btn:hover {
+  background-color: #555 !important;
+  color: white !important;
+}
+
+/* ===== NOTIFICACIONES ===== */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #f8f9fa !important;
+  color: #333 !important;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+body.modo-oscuro .toast {
+  background-color: #2d2d2d !important;
+  color: #f8f9fa !important;
+  border-color: #444;
+}
+
+.toast .btn-close {
+  filter: invert(30%);
+}
+
+/* ===== FAVORITOS ===== */
+#favoritos-container .text-muted {
+  color: #6c757d !important;
+}
+h1[data-traducir="tusFavoritos"] {
+  color: #000 !important; /* 🔹 Negro puro */
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: rgba(184, 206, 232, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm input {
+  width: 100% !important; 
+  max-width: 600px !important; 
+  min-width: 400px !important; 
+  padding: 12px !important; 
+  font-size: 1rem !important; 
+  border-radius: 8px !important; 
+  box-sizing: border-box; 
+}
+
+#mensajeConfirmacion {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+body.modo-oscuro #contactForm {
+  background-color: #2d2d2d;
+  color: white;
+}

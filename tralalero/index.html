@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>TRALAWORLD</title> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css" /> 
+</head> 
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" data-traducir="bienvenido">
+           Bienvenido a TralaWorld, el rincón Tralalá
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#/home" data-traducir="inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#/favorites" data-traducir="favoritos">Favoritos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#/settings" data-traducir="configuracion">Configuración</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#/contact" data-traducir="contacto">Contacto</a>
+            </li>
+          </ul>
+          <button id="modoBtn" class="btn btn-dark">🌙</button> 
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-3">
+    <!-- Sección Home -->
+    <div id="home" class="seccion">
+      <h1 id="titulo" data-traducir="cualFavorito">¿Cuál es tu favorito?</h1> 
+      <h2 id="subtit" data-traducir="hazClick">Haz click en ver más y descúbrelo</h2>
+
+      <div class="mb-3"> 
+        <label for="filtro" class="form-label">Filtrar por título:</label> 
+        <input type="text" id="filtro" class="form-control" placeholder="Buscar..." data-traducir-placeholder="buscar"/> 
+      </div> 
+
+      <div class="mb-3"> 
+        <button id="vistaBtn" class="btn btn-secondary" data-traducir="cambiarVista">Cambiar a lista</button> 
+      </div> 
+
+      <!-- Contenedor principal de memes-->
+      <div id="memes-container" class="row g-3"></div> 
+      <div id="detalle" class="mt-4"></div> 
+    </div>
+
+    <!-- Sección Favorites -->
+    <section id="favorites" class="seccion" style="display:none;">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="mb-0" data-traducir="tusFavoritos">Tus Favoritos</h1>
+        <button onclick="limpiarFavoritos()" class="btn btn-sm btn-outline-danger">
+          🗑️ Limpiar todos
+        </button>
+      </div>
+      <div id="favoritos-container" class="row g-3"></div>
+    </section>
+
+    <section id="settings" class="seccion" style="display:none;">
+      <h1>Configuración</h1>
+      <p>Selecciona tus opciones:</p>
+      <div class="accordion" id="configuracionAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#temaConfig" aria-expanded="true" aria-controls="temaConfig">
+              Tema
+            </button>
+          </h2>
+          <div id="temaConfig" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <button class="btn btn-sm btn-dark" onclick="alternarTema()">Cambiar tema</button>
+            </div>
+          </div>
+        </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#categoriaConfig" aria-expanded="false" aria-controls="categoriaConfig">
+                  Categoría
+                </button>
+              </h2>
+              <div id="categoriaConfig" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <label for="categoriaSelect" class="form-label">Selecciona una categoría:</label>
+                  <select id="categoriaSelect" class="form-select" onchange="filtrarPorCategoria()">
+                    <option value="todos" selected>Todos</option>
+                    <option value="animales">Animales</option>
+                    <option value="objetos">Objetos</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elementosConfig" aria-expanded="false" aria-controls="elementosConfig">
+              Número máximo de elementos por página
+            </button>
+          </h2>
+          <div id="elementosConfig" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <input type="number" id="maxElementosInput" class="form-control" placeholder="Introduce un número" onchange="actualizarMaxElementos()">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="seccion" style="display: none;">
+      <h1>Recibe las últimas novedades 🤪</h1>
+      <p>Déjanos tu nombre y correo para poder enviarte las últimas novedades de brainrot.</p>
+    
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+        </div>
+    
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" id="email" class="form-control" placeholder="Tu correo" required>
+        </div>
+    
+        <button type="submit" class="btn btn-warning">Suscribirme</button>
+      </form>
+    
+      <div id="mensajeConfirmacion" class="mt-3 text-success" style="display: none;">
+        ¡Gracias por suscribirte! Te mantendremos informado. 🎉
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script> 
+  <script src="script.js"></script> 
+
+</body> 
+</html>

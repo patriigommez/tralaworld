@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tralalero Tralalá",
+    "descripcion": "Tralalero tralala, el original.",
+    "contenido": "Este es el primer meme del universo tralalero.",
+    "categoria": "animales",
+    "imagen": "img/tralalero1.jpg",
+    "audio": "audio/tralalero1.mp3"
+  },
+  {
+    "id": 2,
+    "titulo": "Bombardiro Crocodilo",
+    "descripcion": "Una versión de lo más pacífica.",
+    "contenido": "Te recomiendo no pararte a escuchar lo que dice.",
+    "categoria":"animales",
+    "imagen": "img/tralalero2.jpg",
+    "audio": "audio/tralalero2.mp3"
+  },
+  {
+    "id": 3,
+    "titulo": "Ballerina Cappuccina",
+    "descripcion": "Una dulce capuchina bailarina",
+    "contenido": "Muy cute para las más girlies 💅",
+    "categoria":"objetos",
+    "imagen": "img/tralalero3.jpg",
+    "audio": "audio/tralalero3.mp3"
+  },
+  {
+    "id": 4,
+    "titulo": "Tung tung tung Sahur",
+    "descripcion": "Un bate con un bate 🤯",
+    "contenido": "¿Visitarías esta estación de tren...?",
+    "categoria":"objetos", 
+    "imagen": "img/tralalero4.jpg",
+    "audio": "audio/tralalero4.mp3"
+  },
+  {
+    "id": 5,
+    "titulo": "Lirili Larila Elephant",
+    "descripcion": "Elefante, cactus, chanclas gigantes...",
+    "contenido": "Siente la calidez del desierto",
+    "categoria":"animales",
+    "imagen": "img/tralalero5.jpg",
+    "audio": "audio/tralalero5.mp3"
+  },
+  {
+    "id": 6,
+    "titulo": "Glorbo Fruttodrillo",
+    "descripcion": "Crocodrilo Sandía para los más dulces",
+    "contenido": "Escucha su susurro del amore",
+    "categoria":"animales",
+    "imagen": "img/tralalero6.jpg",
+    "audio": "audio/tralalero6.mp3"
+  },
+  {
+    "id": 7,
+    "titulo": "Brr Brr Patapim",
+    "descripcion": "¿Tú sabes qué es? Yo tampoco",
+    "contenido": "pppppppp",
+    "categoria":"objetos",
+    "imagen": "img/tralalero7.jpg",
+    "audio": "audio/tralalero7.mp3"
+  },
+  {
+    "id": 8,
+    "titulo": "Cappuccino Assassino",
+    "descripcion": "El novio malote de Ballerina Cappuccina",
+    "contenido": "El mundo le obligó a ser así...",
+    "categoria":"objetos",
+    "imagen": "img/tralalero8.jpg",
+    "audio": "audio/tralalero8.mp3"
+  },
+  {
+    "id": 9,
+    "titulo": "Trippi Troppi Troppa Trippa",
+    "descripcion": "El gato gamba",
+    "contenido": "nnnnnnnnnnn",
+    "categoria":"animales",
+    "imagen": "img/tralalero9.jpg",
+    "audio": "audio/tralalero9.mp3"
+  }
+]
